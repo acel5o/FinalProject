@@ -90,7 +90,7 @@ public class Utama extends AppCompatActivity {
         try {
             nasabahViewModel.getNasabahRepository(username).observe(this, nasabahResponse -> {
                     try {
-                        Thread.sleep(1500);
+                        Thread.sleep(1000);
                     } catch (Exception e) {
                         System.out.println(e);
                     }

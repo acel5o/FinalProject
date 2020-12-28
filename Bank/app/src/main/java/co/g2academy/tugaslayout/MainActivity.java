@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
     String TAG = MainActivity.class.getSimpleName();
 
-    String SITE_KEY = "6Le1ORUaAAAAAL4xdcNl3jcnBLb2yXxmSTKzIrhc";
-    String SECRET_KEY = "6Le1ORUaAAAAAC9iMfddZ20YTKu2oJc_pgKhnoDl";
+    String SITE_KEY = "6LeUqhYaAAAAAMvAzo1nqpXwVIaIUfVX-AGxRU3E";
+    String SECRET_KEY = "6LeUqhYaAAAAAAS3dMrcaXxYow1uyO1S6WxJepRX";
     RequestQueue queue;
 
     @Override
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                             public void onFailure(@NonNull Exception e) {
                                 if (e instanceof ApiException) {
                                     ApiException apiException = (ApiException) e;
-//                                    Log.d(TAG, "Error message: " + CommonStatusCodes.getStatusCodeString(apiException.getStatusCode()));
+                                    Log.d(TAG, "Error message: " + CommonStatusCodes.getStatusCodeString(apiException.getStatusCode()));
                                 } else {
                                     Log.d(TAG, "Unknown type of error: " + e.getMessage());
                                 }
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
             }
         };
         request.setRetryPolicy(new DefaultRetryPolicy(
-                5000,
+                2000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         queue.add(request);

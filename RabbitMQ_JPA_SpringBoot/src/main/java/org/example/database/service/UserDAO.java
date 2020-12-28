@@ -5,15 +5,12 @@ import org.example.database.model.CekMutasi;
 import org.example.database.model.Mutasi;
 import org.example.database.model.User;
 import org.example.database.rabbitmq.DatabaseSend;
-import org.hibernate.SQLQuery;
 
 
 import javax.persistence.*;
-import java.lang.reflect.Array;
 import java.math.BigInteger;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
